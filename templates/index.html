@@ -13,7 +13,15 @@
     <form method="POST" action="/add_entry">
         <textarea name="content" rows="4" cols="50" placeholder="Write your entry here..." required></textarea><br>
         <label for="happiness">Your mood:</label>
-        <input type="text" name="happiness" placeholder="e.g. happy, sad" required><br>
+        <label for="happiness">Your mood:</label>
+        <select name="happiness" required>
+            <option value="">Select your mood</option>
+            <option value="😊 happy">😊 Happy</option>
+            <option value="😢 sad">😢 Sad</option>
+            <option value="🤩 excited">🤩 Excited</option>
+            <option value="😠 angry">😠 Angry</option>
+            <option value="😴 tired">😴 Tired</option>
+        </select><br>
         <button type="submit">Add Entry</button>
     </form>
 
