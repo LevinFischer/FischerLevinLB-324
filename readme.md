@@ -16,3 +16,6 @@ pre-commit install
 Erklären Sie hier, wie Sie das Passwort aus Ihrer lokalen `.env` auf Azure übertragen.
 
 Ich habe in Azure bei den Umgebungsvariablen eine neue Variable deklarier, welchen den gleichen Namen und den gleichen Wert hatte wie die Variable im .env File.
+
+#Link zur WebApp:
+https://fischerlevinlb-324-e5fhgrg3fcetg3bd.canadacentral-01.azurewebsites.net/
