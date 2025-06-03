@@ -4,7 +4,6 @@ from dataclasses import dataclass
 import os
 from dotenv import load_dotenv
 
-
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 load_dotenv()
@@ -15,6 +14,7 @@ entries = []
 @dataclass
 class Entry:
     content: str
+    happiness: str
     timestamp: datetime = datetime.now()
 
 
@@ -46,9 +46,10 @@ def logout():
 @app.route("/add_entry", methods=["POST"])
 def add_entry():
     content = request.form.get("content")
-    if content:
-        entry = Entry(content=content)
-        entries.append(entry)
+    happiness = request.form.get("happiness")
+    if content and happiness:
+        entry = Entry(content=content, happiness=happiness)
+        entries.insert(0, entry)  # newest entry on top
     return redirect(url_for("index"))
 
 
