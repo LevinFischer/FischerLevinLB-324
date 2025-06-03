@@ -10,6 +10,9 @@ Stelle sicher, dass Python und `pip3` installiert sind. Dann führe im Terminal 
 ```bash
 pip3 install pre-commit
 pre-commit install
+```
 
 ## Aufgabe 4
 Erklären Sie hier, wie Sie das Passwort aus Ihrer lokalen `.env` auf Azure übertragen.
+
+Ich habe in Azure bei den Umgebungsvariablen eine neue Variable deklarier, welchen den gleichen Namen und den gleichen Wert hatte wie die Variable im .env File.
